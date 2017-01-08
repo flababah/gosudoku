@@ -161,7 +161,7 @@ func main() {
 
 		switch char {
 		case '1', '2', '3', '4', '5', '6', '7', '8', '9':
-			value := uint(char) - '0' - 1
+			value := uint(char) - '1'
 			cell.value = value
 			cell.unset(value)
 			continue
