@@ -50,8 +50,7 @@ func (c *cell) initConstraints(index int) {
 	}
 }
 
-// Calculate possible candidates. Returns a closure that iterates
-// the candidates.
+// Returns a mask representing valid candidates for a given cell.
 func (c *cell) possibilities() mask {
 	return *c.groups[0] & *c.groups[1] & *c.groups[2]
 }
@@ -102,12 +101,11 @@ func solve(queue **cell) bool {
 		return true
 	}
 	bestp := queue
-	best := 9
+	best := 10
 
 	// Find the best candidate to recurse on.
 	for pptr := queue; *pptr != nil; pptr = &(*pptr).next {
-		current := *pptr
-		pop := current.possibilities().popCount()
+		pop := (*pptr).possibilities().popCount()
 		if pop == 1 {
 			bestp = pptr
 			break // Obvious elimination.

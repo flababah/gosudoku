@@ -13,7 +13,7 @@ The puzzle is given as an argument to the program by encoding it using the follo
 
     .8.14.3..4.1..95...79638...9...1.4.3....8....1.7.2...5...89263...43..7.2..6.57.9.
     
-Dots represent blank cells in the puzzle. The sequence formed by reading the puzzle left to right, top to bottom.
+Dots represent blank cells in the puzzle. The sequence is formed by reading the puzzle left to right, top to bottom.
 
 The result is output in the terminal:
 
