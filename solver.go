@@ -144,7 +144,7 @@ func main() {
 
 	// Set default bits in constraints.
 	for i, group := range constraints {
-		for j, _ := range group {
+		for j := range group {
 			constraints[i][j] = DEFAULT_MASK
 		}
 	}
